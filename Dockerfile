@@ -10,6 +10,7 @@ WORKDIR /app
 COPY tsconfig.json tsup.config.ts ./
 COPY src ./src
 COPY bin ./bin
+COPY scripts ./scripts
 COPY migrations ./migrations
 RUN npm run build
 
