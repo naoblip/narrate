@@ -51,7 +51,7 @@ This starts a local Node process. Ensure Postgres is reachable via `DATABASE_URL
 From your VPS:
 
 ```bash
-git clone <your-repo-url> narrate
+git clone https://github.com/naoblip/narrate narrate
 cd narrate
 chmod +x setup.sh
 ./setup.sh --cors "https://your-frontend.example.com"
