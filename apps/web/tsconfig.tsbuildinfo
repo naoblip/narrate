@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/app/AppShell.tsx","./src/app/router.tsx","./src/features/agent/AgentActivityPage.tsx","./src/features/place/PlacePage.tsx","./src/features/skill/SkillPage.tsx","./src/features/world/WorldPage.tsx","./src/lib/config.ts","./src/lib/api/client.ts","./src/lib/api/types.ts"],"version":"5.9.3"}
