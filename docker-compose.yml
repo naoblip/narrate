@@ -17,7 +17,7 @@ services:
   narrate:
     build:
       context: .
-      dockerfile: config/Dockerfile
+      dockerfile: Dockerfile
     environment:
       DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD:-postgres}@db:5432/narrate
       ADMIN_API_KEY: ${ADMIN_API_KEY}
