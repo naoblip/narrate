@@ -92,6 +92,9 @@ fi
 log "Pulling images..."
 docker compose -f "${COMPOSE_FILE}" pull
 
+log "Building Narrate image..."
+docker compose -f "${COMPOSE_FILE}" build narrate
+
 log "Starting Narrate..."
 docker compose -f "${COMPOSE_FILE}" up -d
 
@@ -128,7 +131,7 @@ echo "    cd ${SCRIPT_DIR}"
 echo "    docker compose logs -f        # view logs"
 echo "    docker compose restart        # restart"
 echo "    docker compose down           # stop"
-echo "    docker compose pull && docker compose up -d  # update"
+echo "    docker compose pull && docker compose build narrate && docker compose up -d  # update"
 echo ""
 echo "  Create your first agent:"
 echo "    curl -s http://localhost:3000/api/agents \\"

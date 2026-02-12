@@ -24,6 +24,7 @@ RUN npm prune --omit=dev
 
 COPY --from=build /app/dist ./dist
 COPY migrations ./migrations
+COPY world.schema.json ./world.schema.json
 
 EXPOSE 3000
 CMD ["node", "dist/src/server.js"]
