@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Narrate World",
+  "type": "object",
+  "required": ["regions", "character_options", "starting_position"],
+  "additionalProperties": false,
+  "properties": {
+    "regions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "locations"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "connected_to": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": []
+          },
+          "locations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["name", "description", "places"],
+              "additionalProperties": false,
+              "properties": {
+                "name": { "type": "string" },
+                "description": { "type": "string" },
+                "places": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": ["name", "description"],
+                    "additionalProperties": false,
+                    "properties": {
+                      "name": { "type": "string" },
+                      "description": { "type": "string" },
+                      "random_events": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["id", "text", "weight", "cooldown"],
+                          "additionalProperties": false,
+                          "properties": {
+                            "id": { "type": "string" },
+                            "text": { "type": "string" },
+                            "weight": { "type": "integer", "minimum": 1 },
+                            "cooldown": { "type": "integer", "minimum": 0 }
+                          }
+                        },
+                        "default": []
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "character_options": {
+      "type": "object",
+      "required": ["species", "traits"],
+      "additionalProperties": false,
+      "properties": {
+        "species": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "traits": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "inventory": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "default": {}
+        }
+      }
+    },
+    "starting_position": {
+      "type": "object",
+      "required": ["region", "location", "place"],
+      "additionalProperties": false,
+      "properties": {
+        "region": { "type": "string" },
+        "location": { "type": "string" },
+        "place": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "regions": [
+    {
+      "name": "Hearthlands",
+      "description": "A temperate heartland of trade routes and quiet farms, stitched together by hedgerows and low stone walls.",
+      "connected_to": ["Wyrdwood"],
+      "locations": [
+        {
+          "name": "Crossing",
+          "description": "A bustling crossroads where travelers converge and caravans trade time for rumor.",
+          "places": [
+            {
+              "name": "Market Square",
+              "description": "Stalls and barrows packed with goods from every road, the cobbles always wet from the fountain.",
+              "random_events": [
+                {
+                  "id": "evt_market_001",
+                  "text": "A caravan overturns, scattering goods and drawing a sudden crowd.",
+                  "weight": 2,
+                  "cooldown": 900
+                },
+                {
+                  "id": "evt_market_002",
+                  "text": "A traveling musician strikes up a lively tune that lifts the whole square.",
+                  "weight": 1,
+                  "cooldown": 600
+                },
+                {
+                  "id": "evt_market_003",
+                  "text": "The town crier announces a missing heirloom and offers a modest reward.",
+                  "weight": 1,
+                  "cooldown": 1800
+                }
+              ]
+            },
+            {
+              "name": "Wayfarer Inn",
+              "description": "A warm hall with a steady fire and a keeper who knows every face.",
+              "random_events": [
+                {
+                  "id": "evt_inn_001",
+                  "text": "A soaked messenger bursts in with a sealed letter for someone unknown.",
+                  "weight": 1,
+                  "cooldown": 1200
+                },
+                {
+                  "id": "evt_inn_002",
+                  "text": "A table of traders erupts into a laughing argument over the best road to the coast.",
+                  "weight": 2,
+                  "cooldown": 900
+                }
+              ]
+            },
+            {
+              "name": "Guildhall Steps",
+              "description": "Broad steps where clerks post contracts and petitioners gather before the bell.",
+              "random_events": [
+                {
+                  "id": "evt_guildhall_001",
+                  "text": "A new charter is nailed to the board, drawing a surge of eager onlookers.",
+                  "weight": 1,
+                  "cooldown": 2400
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Greenfold",
+          "description": "A ribbon of farms and orchards that feed the Crossing and keep its granaries full.",
+          "places": [
+            {
+              "name": "Orchard Row",
+              "description": "Long lines of fruit trees and the soft hum of bees in wicker hives.",
+              "random_events": [
+                {
+                  "id": "evt_orchard_001",
+                  "text": "A sudden gust knocks loose a shower of apples that rolls across the path.",
+                  "weight": 2,
+                  "cooldown": 1200
+                }
+              ]
+            },
+            {
+              "name": "Miller's Bridge",
+              "description": "A covered bridge beside a turning wheel and a steady, grain-scented mist.",
+              "random_events": [
+                {
+                  "id": "evt_bridge_001",
+                  "text": "The miller offers a quiet warning about strange tracks along the riverbank.",
+                  "weight": 1,
+                  "cooldown": 1800
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wyrdwood",
+      "description": "A deep, shadowed forest where old paths twist and the air smells of rain and pine.",
+      "connected_to": ["Hearthlands"],
+      "locations": [
+        {
+          "name": "Mistgrove",
+          "description": "A mossy hollow where the canopy dims the day and whispers carry far.",
+          "places": [
+            {
+              "name": "Stone Circle",
+              "description": "Ancient standing stones etched with runes worn smooth by weather.",
+              "random_events": [
+                {
+                  "id": "evt_circle_001",
+                  "text": "A faint blue glow creeps along the runes before fading back into the stone.",
+                  "weight": 1,
+                  "cooldown": 3600
+                }
+              ]
+            },
+            {
+              "name": "Foxglove Hollow",
+              "description": "A sheltered nook with bright flowers and a narrow, winding trail.",
+              "random_events": [
+                {
+                  "id": "evt_hollow_001",
+                  "text": "A startled deer bolts through the brush, startling birds into flight.",
+                  "weight": 2,
+                  "cooldown": 900
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Warden's Line",
+          "description": "A watchtrail of leaning posts and old markers that once kept the forest tame.",
+          "places": [
+            {
+              "name": "Old Watchtower",
+              "description": "A crumbling tower with a clear view over the treetops and the valley beyond.",
+              "random_events": [
+                {
+                  "id": "evt_tower_001",
+                  "text": "A flare of distant light flickers on the horizon and then vanishes.",
+                  "weight": 1,
+                  "cooldown": 2400
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "character_options": {
+    "species": ["Human", "Elf", "Dwarf", "Halfling", "Orc", "Gnome"],
+    "traits": ["Brave", "Cunning", "Stoic", "Curious", "Wary", "Kind", "Ambitious", "Patient", "Restless", "Pragmatic"],
+    "inventory": {
+      "head": [
+        "Wool Cap",
+        "Leather Hood",
+        "Traveler Hat",
+        "Felt Beret",
+        "Iron Helm",
+        "Chain Coif",
+        "Bronze Circlet",
+        "Feathered Cap",
+        "Cloth Wrap",
+        "Storm Hood",
+        "Bandana",
+        "Visored Sallet"
+      ],
+      "neck": [
+        "Copper Amulet",
+        "Beaded Necklace",
+        "Traveler Scarf",
+        "Silver Locket",
+        "Stone Talisman",
+        "Leather Cord",
+        "Iron Torque",
+        "Prayer Beads",
+        "Wayfinder Pendant",
+        "Wooden Charm"
+      ],
+      "body": [
+        "Linen Tunic",
+        "Leather Jerkin",
+        "Traveling Cloak",
+        "Padded Vest",
+        "Chain Shirt",
+        "Quilted Gambeson",
+        "Canvas Duster",
+        "Woolen Mantle",
+        "Rider's Coat",
+        "Scale Vest",
+        "Field Surcoat",
+        "Scribe Robe"
+      ],
+      "legs": [
+        "Canvas Trousers",
+        "Wool Skirt",
+        "Leather Chaps",
+        "Reinforced Breeches",
+        "Padded Greaves",
+        "Traveler Kilt",
+        "Chain Leggings",
+        "Work Apron"
+      ],
+      "hands": [
+        "Work Gloves",
+        "Fingerless Gloves",
+        "Studded Bracers",
+        "Leather Gauntlets",
+        "Cloth Wraps",
+        "Iron Vambraces",
+        "Fur Mitts"
+      ],
+      "feet": [
+        "Sturdy Boots",
+        "Soft Shoes",
+        "Trail Sandals",
+        "Riding Boots",
+        "Iron Sabatons",
+        "Wool Socks",
+        "Mud Clogs",
+        "Traveler Greaves"
+      ],
+      "ring": [
+        "Signet Ring",
+        "Plain Band",
+        "Carved Wooden Ring",
+        "Copper Ring",
+        "Silver Band",
+        "Stone Seal",
+        "Braided Ring"
+      ],
+      "left_hand": [
+        "Wooden Buckler",
+        "Lantern",
+        "Rope Coil",
+        "Torch",
+        "Small Shield",
+        "Herbal Satchel",
+        "Map Case",
+        "Parrying Dagger",
+        "Hunting Trap"
+      ],
+      "right_hand": [
+        "Iron Dagger",
+        "Walking Staff",
+        "Short Sword",
+        "Hunting Bow",
+        "Woodcutting Axe",
+        "Spear",
+        "Mace",
+        "Sling",
+        "Traveling Hammer",
+        "Fishing Rod",
+        "Long Knife",
+        "Crossbow"
+      ]
+    }
+  },
+  "starting_position": {
+    "region": "Hearthlands",
+    "location": "Crossing",
+    "place": "Market Square"
+  }
+}

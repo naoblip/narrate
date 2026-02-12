@@ -1,0 +1,62 @@
+{
+  "regions": [
+    {
+      "name": "Harborlight",
+      "description": "A coastal city where lanterns guide ships through the fog.",
+      "connected_to": ["Windshore"],
+      "locations": [
+        {
+          "name": "Old Docks",
+          "description": "Weathered piers and creaking ropes.",
+          "places": [
+            {
+              "name": "Lighthouse Steps",
+              "description": "Salt-stained steps leading to the beacon.",
+              "random_events": [
+                {
+                  "id": "evt_light_001",
+                  "text": "The lighthouse bell tolls as a storm rolls in.",
+                  "weight": 2,
+                  "cooldown": 1200
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Windshore",
+      "description": "Bluffside villages scattered along windy cliffs.",
+      "connected_to": ["Harborlight"],
+      "locations": [
+        {
+          "name": "Cliff Market",
+          "description": "Stalls perched above the crashing waves.",
+          "places": [
+            {
+              "name": "Rope Bridge",
+              "description": "A narrow bridge swaying over the inlet.",
+              "random_events": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "character_options": {
+    "species": ["Human", "Elf"],
+    "traits": ["Curious", "Wary", "Brave"],
+    "inventory": {
+      "head": ["Cap"],
+      "left_hand": ["Lantern"],
+      "right_hand": ["Hook"],
+      "body": ["Oilcoat"]
+    }
+  },
+  "starting_position": {
+    "region": "Harborlight",
+    "location": "Old Docks",
+    "place": "Lighthouse Steps"
+  }
+}
