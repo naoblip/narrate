@@ -34,12 +34,6 @@ async function request<T>(path: string, params?: QueryParams): Promise<T> {
 
 export const api = {
   getWorld: () => request<WorldData>("/api/world"),
-  getSkill: () => fetch(buildUrl("/skill")).then(async (res) => {
-    if (!res.ok) {
-      throw new Error(`Failed to load skill doc (${res.status})`);
-    }
-    return res.text();
-  }),
   getActivity: (region: string, location: string, place: string, limit = 50, cursor?: string) =>
     request<ActivityResponse>(
       `/api/places/${encodeURIComponent(region)}/${encodeURIComponent(location)}/${encodeURIComponent(place)}/activity`,

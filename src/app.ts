@@ -26,6 +26,13 @@ export function createApp(world: WorldConfig) {
     }
     res.type("text/markdown").send(fs.readFileSync(skillPath, "utf8"));
   });
+  router.get("/heartbeat", (_req, res) => {
+    const heartbeatPath = path.resolve(process.cwd(), "HEARTBEAT.md");
+    if (!fs.existsSync(heartbeatPath)) {
+      return res.status(404).send("HEARTBEAT.md not found");
+    }
+    res.type("text/markdown").send(fs.readFileSync(heartbeatPath, "utf8"));
+  });
   registerHealthRoutes(router);
   registerWorldRoutes(router, world);
   registerAgentRoutes(router, world);

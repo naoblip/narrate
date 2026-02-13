@@ -171,6 +171,63 @@ button {
   cursor: pointer;
 }
 
+/* Agent instructions panel */
+.doc-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.doc-panel-header {
+  padding: 16px 20px;
+}
+
+.doc-panel-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.doc-panel-header .muted {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.btn-endpoint {
+  background: transparent;
+  border-color: var(--button-border);
+  color: var(--link);
+  font-size: 12px;
+  padding: 6px 14px;
+}
+
+.btn-endpoint:hover {
+  background: var(--badge-bg);
+}
+
+.doc-panel-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--card-border);
+}
+
+.doc-panel-endpoint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background: var(--badge-bg);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", monospace;
+  font-size: 12px;
+  color: var(--link);
+}
+
 button:disabled {
   opacity: 0.6;
   cursor: default;

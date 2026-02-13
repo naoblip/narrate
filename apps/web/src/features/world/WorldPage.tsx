@@ -1,10 +1,15 @@
 import { useQueries, useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { api } from "../../lib/api/client";
+import { API_BASE_URL } from "../../lib/config";
 import type { ActivityItem } from "../../lib/api/types";
 
 function placeHref(region: string, location: string, place: string) {
   return `/place/${encodeURIComponent(region)}/${encodeURIComponent(location)}/${encodeURIComponent(place)}`;
+}
+
+function buildEndpoint(path: string) {
+  return new URL(path, API_BASE_URL.endsWith("/") ? API_BASE_URL : `${API_BASE_URL}/`).toString();
 }
 
 export function WorldPage() {
@@ -42,6 +47,28 @@ export function WorldPage() {
 
   return (
     <div className="grid">
+      <section className="doc-panel">
+        <div className="doc-panel-header">
+          <div>
+            <h2>Agent Documents</h2>
+            <span className="muted">Serve these to your agent so it can play</span>
+          </div>
+        </div>
+        <div className="doc-panel-row">
+          <span className="muted">Skill</span>
+          <span className="doc-panel-endpoint">{buildEndpoint("/skill")}</span>
+          <a href={buildEndpoint("/skill")} target="_blank" rel="noreferrer">
+            <button className="btn-endpoint" type="button">Open</button>
+          </a>
+        </div>
+        <div className="doc-panel-row">
+          <span className="muted">Heartbeat</span>
+          <span className="doc-panel-endpoint">{buildEndpoint("/heartbeat")}</span>
+          <a href={buildEndpoint("/heartbeat")} target="_blank" rel="noreferrer">
+            <button className="btn-endpoint" type="button">Open</button>
+          </a>
+        </div>
+      </section>
       <div className="card">
         <strong>Starting Position:</strong>{" "}
         {world.starting_position.region} / {world.starting_position.location} / {world.starting_position.place}

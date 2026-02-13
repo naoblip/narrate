@@ -33,7 +33,6 @@ export function AppShell() {
       <nav className="nav">
         <NavLink to="/world">World</NavLink>
         <NavLink to="/agent-activity">Agent Activity</NavLink>
-        <NavLink to="/skill">Skill</NavLink>
         <div className="nav-spacer" />
         <button type="button" onClick={toggleTheme}>
           {theme === "dark" ? "Light mode" : "Dark mode"}
